@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  .row
+    .login-area.card.col-sm-4.col-sm-offset-4
+      .card-header Welcome to 4each!
+      .card-title 新規登録
+      form.card-form(method="POST")
+        input(type='hidden', name='_csrf', value=_csrf)
+        .form-group
+          input.form-control(type="email", placeholder="メールアドレス", name='email', id='email', autofocus, required)
+        .form-group
+          input.form-control(type="password", placeholder="パスワード", name='password', id='password', required)
+        .form-group
+          input.form-control(type="password", placeholder="パスワード 再び", name='confirmPassword', id='confirmPassword', required)
+        input.btn(type="submit", value="新規登録")
+      .card-footer
+        a(href="/login") ログイン

@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+
+  .row
+    .login-area.card.col-sm-4.col-sm-offset-4
+      .card-header Welcome to 4each!
+      .card-notice
+        i.fa.fa-info-circle
+        a(href="") 運営からのお知らせが一件あります。
+      .card-title ログイン
+      form.card-form(method="POST")
+        input(type='hidden', name='_csrf', value=_csrf)
+        .form-group
+          input.form-control(type="email", placeholder="メールアドレス", name='email', id='email', autofocus, required)
+        .form-group
+          input.form-control(type="password", placeholder="パスワード", name='password', id='password', required)
+        p.card-form-notice
+          | パスワードの再発行は
+          a(href="/forgot") コチラ
+        input.btn(type="submit", value="ログイン")
+      .card-footer
+        a(href="/signup") 新規登録

@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  .row
+  .login-area.card.col-sm-4.col-sm-offset-4
+    .card-header アカウント編集
+    img.card-prof-image(src=user.gravatar())
+    form.card-form(action='/account/update', method='POST')
+      input(type='hidden', name='_csrf', value=_csrf)
+      .form-group
+        input.form-control(type="text", placeholder="お名前", name='name', id='name', value=user.profile.name)
+      h2.card-sub-title 登録メールアドレス
+      .form-group
+        input.form-control(type="email", placeholder="メールアドレス", name='email', id='email', value=user.email)
+      h2.card-sub-title 登録パスワード
+      .form-group
+        input.form-control(type="password", placeholder="パスワード", name='password', id='password', value=user.password)
+      .space-10
+      input.btn(type='submit', value="保存する") 
+      .space-10

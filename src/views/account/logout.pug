@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    .row
+    .login-area.card.col-sm-4.col-sm-offset-4
+        .card-header 本当に退会しますか？
+        img.card-prof-image(src=user.gravatar())
+        h1.card-name= user.profile.name ||user.email
+        .space-10
+        a(href="/logout")
+            .card-button 退会する
+        .space-10

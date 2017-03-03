@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    .row
+        .login-area.card.col-sm-4.col-sm-offset-4
+            .card-header アカウント情報
+            img.card-prof-image(src=user.gravatar())
+            h1.card-name= user.profile.name || user.email || user.id
+            h2.card-sub-title 登録メールアドレス
+            p= user.email
+            h2.card-sub-title 登録パスワード
+            p= user.password
+            .space-10
+            a(href="/account/edit")
+                .card-button 編集する
+            .space-10

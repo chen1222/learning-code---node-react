@@ -1,0 +1,704 @@
+@charset "UTF-8";
+body {
+  background-color: #E6EBF0;
+  font-weight: 200;
+  font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', Osaka, Arial, Helvetica, Verdana, sans-serif; }
+
+a {
+  color: #1B9437; }
+  a:hover {
+    color: #34AB4F; }
+
+p {
+  margin: 0px; }
+
+pre {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border-radius: 0px; }
+
+.space-10 {
+  height: 10px; }
+
+.top-20 {
+  margin-top: 20px; }
+
+.bottom-20 {
+  margin-bottom: 20px; }
+
+.center {
+  text-align: center; }
+
+.modal {
+  z-index: 999999; }
+
+.mb-no-display {
+  display: block; }
+  @media (max-width: 600px) {
+    .mb-no-display {
+      display: none; } }
+
+.board-area {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.chart-area {
+  height: 300px;
+  padding: 10px; }
+  .chart-area canvas {
+    margin: auto;
+    display: block; }
+
+.plan-area {
+  height: 300px;
+  padding: 10px 10px 10px 10px; }
+  .plan-area .button-up {
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px gray;
+    background-color: white;
+    color: #3C3C3C;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    padding-top: -20px;
+    border-radius: 50%;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 45px;
+    cursor: pointer; }
+    @media (max-width: 600px) {
+      .plan-area .button-up {
+        margin-left: -20px;
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 80px; } }
+    @media (max-width: 600px) {
+      .plan-area .button-up i {
+        margin-top: -4px;
+        display: block; } }
+  .plan-area .button-down {
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px gray;
+    background-color: white;
+    color: #3C3C3C;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 45px;
+    cursor: pointer; }
+    @media (max-width: 600px) {
+      .plan-area .button-down {
+        margin-left: -20px;
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        line-height: 30px; } }
+    @media (max-width: 600px) {
+      .plan-area .button-down i {
+        margin-top: 4px; } }
+  .plan-area .plan-boxes {
+    height: 260px; }
+    .plan-area .plan-boxes .plan-box {
+      height: 60px;
+      vertical-align: middle;
+      opacity: 0.7; }
+      .plan-area .plan-boxes .plan-box .plan-title {
+        color: #1B9437;
+        font-size: 10px;
+        margin-top: 20px; }
+      .plan-area .plan-boxes .plan-box .plan-content {
+        color: #3C3C3C;
+        font-size: 12px;
+        font-weight: bold; }
+    .plan-area .plan-boxes .plan-box.today {
+      font-weight: bold;
+      opacity: 1.0; }
+      .plan-area .plan-boxes .plan-box.today .plan-title {
+        font-size: 16px; }
+      .plan-area .plan-boxes .plan-box.today .plan-content {
+        font-size: 24px; }
+
+.text-area {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #3C3C3C;
+  text-align: center;
+  font-size: 24px; }
+
+.eyecatch {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0174c1+0,51a7f9+100 */
+  background: #0174c1;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #0174c1 0%, #51a7f9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #0174c1 0%, #51a7f9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0174c1 0%, #51a7f9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0174c1', endColorstr='#51a7f9',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  padding: 20px 0px; }
+  .eyecatch a {
+    text-decoration: none; }
+
+.navbar {
+  margin-bottom: 0px; }
+  .navbar .topbar-image {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center,center;
+    background-repeat: no-repeat; }
+
+.navbar-default {
+  background-color: white;
+  box-shadow: 1px 1px 1px gray;
+  border-radius: 0px; }
+
+.navbar-brand img {
+  height: 40px;
+  margin-top: -10px; }
+
+.container.main {
+  min-height: 600px; }
+  .container.main .alert {
+    margin-top: 10px;
+    margin-bottom: -20px; }
+
+.login-area {
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 100px; }
+
+.card {
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px gray;
+  background-color: white;
+  color: #3C3C3C;
+  padding: 0px; }
+  .card .card-header {
+    background-color: #1B9437;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px; }
+  .card .card-prof-image {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto 10px auto;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center,center;
+    background-repeat: no-repeat; }
+  .card h1.card-name {
+    font-size: 24px; }
+  .card .card-notice {
+    margin: 0px 0px 20px 0px;
+    font-size: 10px;
+    color: #1B9437;
+    text-decoration: underline; }
+    .card .card-notice i {
+      text-decoration: none;
+      font-size: 14px; }
+  .card .card-title {
+    font-size: 24px; }
+  .card .lesson-card-title {
+    font-size: 20px;
+    margin: 5px 0px 5px 5px; }
+  .card .lesson-card-description {
+    margin: 5px 0px 20px 5px;
+    width: auto;
+    font-size: 12px; }
+  .card .row.in-card {
+    margin: 0px; }
+  .card .card-top {
+    height: 30px; }
+    .card .card-top .card-label {
+      background-color: #1B9437;
+      color: white;
+      padding: 5px 20px;
+      font-size: 16px;
+      margin-left: -2px; }
+      .card .card-top .card-label .card-label-icon {
+        width: 30px;
+        margin-top: -3px;
+        margin-right: 5px; }
+      .card .card-top .card-label .card-label-icon.small {
+        width: 20px; }
+  .card hr.card-line {
+    margin: -3px auto 4px auto;
+    width: 30px;
+    border-color: #1B9437; }
+  .card .card-sub-title {
+    font-size: 11px;
+    color: #A6AAA9; }
+  .card .card-image {
+    margin: 10px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #1B9437; }
+    .card .card-image img {
+      width: 50px;
+      margin-top: 15px; }
+  .card .card-description {
+    text-align: left;
+    margin: 15px auto;
+    width: 60%; }
+  .card .card-progress {
+    height: 25px;
+    background-color: #eee;
+    width: 80%;
+    margin: 10px auto 20px auto;
+    border-radius: 5px; }
+    .card .card-progress .progress-bar {
+      background-color: #1B9437;
+      height: 100%;
+      border-radius: 5px;
+      text-align: right;
+      line-height: 25px;
+      padding-right: 10px;
+      font-weight: bold; }
+  .card .card-button {
+    height: 35px;
+    color: white;
+    background-color: #1B9437;
+    margin: 10px auto;
+    width: 100px;
+    line-height: 35px;
+    display: block;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center; }
+    .card .card-button .button-icon {
+      width: 23px;
+      float: left;
+      margin: 5px -15px 5px 15px; }
+  .card .card-button.fleft {
+    float: left;
+    margin-left: 15px; }
+    @media (max-width: 600px) {
+      .card .card-button.fleft {
+        float: none;
+        margin: 10px auto;
+        text-align: center; } }
+  .card .card-form {
+    padding: 20px 35px;
+    display: block; }
+    .card .card-form input {
+      height: 45px; }
+    .card .card-form .card-form-notice {
+      text-align: left;
+      font-size: 10px;
+      padding-left: 20px;
+      color: #A6AAA9;
+      margin-bottom: 20px;
+      margin-top: -10px; }
+    .card .card-form input[type=submit] {
+      height: 40px;
+      background-color: #1B9437;
+      color: white;
+      border: 0px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 0px; }
+      .card .card-form input[type=submit]:hover {
+        background-color: #34AB4F; }
+    .card .card-form input[type=submit].small {
+      width: 30%; }
+  .card .card-con-300 {
+    height: 300px; }
+  .card .card-footer {
+    padding: 10px 0px 20px 0px; }
+    .card .card-footer a {
+      font-size: 10px;
+      text-decoration: underline; }
+
+.icon-box {
+  color: #1B9437;
+  padding: 5px;
+  text-align: center; }
+  .icon-box .check-box-square {
+    border: 5px solid #aaa;
+    width: 20px;
+    height: 20px;
+    margin: 15px auto; }
+    .icon-box .check-box-square img.icon-image {
+      width: 30px;
+      margin-top: -30px;
+      margin-left: -7px; }
+  .icon-box .check-box-square.nocheck img.icon-image {
+    display: none; }
+  .icon-box img.icon-image {
+    width: 80%; }
+  .icon-box .icon-text {
+    font-size: 10px; }
+  .icon-box .icon-text.white {
+    color: white; }
+
+.icon-box.icon-small img {
+  width: 60%;
+  margin-top: 15px; }
+
+.card.card-separated {
+  margin: 0px 10px 20px 10px;
+  position: relative; }
+  @media (max-width: 600px) {
+    .card.card-separated {
+      margin: 0px; } }
+  .card.card-separated .card-archive {
+    position: absolute;
+    color: #1B9437;
+    top: 30%;
+    left: 18%;
+    font-size: 25px;
+    opacity: 0.8;
+    font-weight: 700;
+    font-family: "Hiragino Sans"; }
+    @media (max-width: 600px) {
+      .card.card-separated .card-archive {
+        left: 22%;
+        font-size: 20px; } }
+    .card.card-separated .card-archive .card-archive-num {
+      font-size: 35px; }
+      @media (max-width: 600px) {
+        .card.card-separated .card-archive .card-archive-num {
+          font-size: 25px; } }
+
+.card.topline {
+  border-top: 2px solid #1B9437; }
+
+.goal .face {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center,center;
+  background-repeat: no-repeat; }
+
+.goal .goal-text {
+  height: 80px;
+  padding-left: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: table-cell;
+  vertical-align: middle; }
+
+.lessons {
+  color: white; }
+  .lessons .lesson-image {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center; }
+    .lessons .lesson-image img {
+      width: 80px;
+      margin-top: 20px; }
+  .lessons .lesson-count {
+    margin-top: 5px; }
+  .lessons h1.lesson-title {
+    margin: 5px 0px; }
+
+.studies {
+  color: white; }
+  .studies .study-image {
+    text-align: center; }
+    .studies .study-image img {
+      width: 80%;
+      margin-top: 10px; }
+    .studies .study-image .study-image-text {
+      font-size: 11px;
+      margin-top: 5px; }
+  .studies .study-count {
+    font-size: 12px; }
+  .studies h1.study-title {
+    margin: 5px 0px;
+    font-size: 24px; }
+  .studies .study-description {
+    font-size: 12px;
+    margin: 10px 0px 5px 0px; }
+  .studies .icon-small {
+    margin-top: 10px; }
+    .studies .icon-small img.icon-image {
+      width: 35%; }
+      @media (max-width: 600px) {
+        .studies .icon-small img.icon-image {
+          width: 60%; } }
+    .studies .icon-small .icon-text {
+      margin-top: 5px; }
+      @media (max-width: 600px) {
+        .studies .icon-small .icon-text {
+          font-size: 10px; } }
+
+.study-area {
+  margin-top: 60px;
+  margin-bottom: 60px; }
+  @media (max-width: 600px) {
+    .study-area {
+      margin-bottom: 120px; } }
+  .study-area .card {
+    background-color: black; }
+
+.slide-area {
+  margin-top: 60px;
+  margin-bottom: 60px; }
+  @media (max-width: 600px) {
+    .slide-area {
+      margin-top: 30px;
+      margin-bottom: 100px; } }
+  .slide-area ul.slides li.slide {
+    display: none; }
+    .slide-area ul.slides li.slide img {
+      width: 100%; }
+  .slide-area ul.slides li.slide:first-child {
+    display: block; }
+  .slide-area .slide-left {
+    display: none;
+    cursor: pointer; }
+  .slide-area .slide-right {
+    cursor: pointer; }
+  .slide-area .slide-bottom {
+    height: 60px;
+    text-align: center;
+    line-height: 60px; }
+
+.slide-right-circle, .slide-left-circle {
+  cursor: pointer;
+}
+
+.slide-left-circle {
+  display: none;
+}
+
+.completion-icon {
+  font-size: 15vh;
+}
+
+.note-area {
+  margin-top: 60px;
+  margin-bottom: 60px; }
+  @media (max-width: 600px) {
+    .note-area {
+      margin-bottom: 110px; } }
+  .note-area .note-content {
+    padding-top: 10px; }
+    @media (max-width: 600px) {
+      .note-area .note-content {
+        padding-top: 0px; } }
+    .note-area .note-content .left-note {
+      padding-right: 2px; }
+      @media (max-width: 600px) {
+        .note-area .note-content .left-note {
+          padding: 0px; } }
+    .note-area .note-content .right-note {
+      padding-left: 2px; }
+      @media (max-width: 600px) {
+        .note-area .note-content .right-note {
+          padding: 0px; } }
+    .note-area .note-content .code {
+      height: 500px;
+      overflow-y: auto;
+      border: 1px solid #282828; }
+      @media (max-width: 600px) {
+        .note-area .note-content .code {
+          height: 250px; } }
+      .note-area .note-content .code .code-title {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        width: 100px;
+        background-color: #282828;
+        color: white;
+        text-align: center;
+        z-index: 99999; }
+        @media (max-width: 600px) {
+          .note-area .note-content .code .code-title {
+            left: 0px; } }
+    .note-area .note-content .editor {
+      height: 477px;
+      margin-top: 23px; }
+      @media (max-width: 600px) {
+        .note-area .note-content .editor {
+          height: 227px; } }
+    .note-area .note-content .code.black {
+      background-color: #282828; }
+
+.help-area {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 30px; }
+  .help-area .help-box {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+    .help-area .help-box .help-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 3px 0px;
+      cursor: pointer; }
+      .help-area .help-box .help-title:before {
+        content: 'Q.';
+        font-size: 30px;
+        margin-right: 5px; }
+      .help-area .help-box .help-title:after {
+        content: '▼';
+        font-size: 13px;
+        display: block;
+        float: right;
+        margin-top: 15px;
+        margin-right: 20px; }
+        @media (max-width: 600px) {
+          .help-area .help-box .help-title:after {
+            margin-top: 5px; } }
+    .help-area .help-box .help-answer {
+      padding-left: 20px;
+      display: none; }
+      .help-area .help-box .help-answer:before {
+        content: 'A.';
+        font-size: 20px;
+        margin-right: 5px; }
+  .help-area .help-box.show .help-title:after {
+    content: '▲'; }
+  .help-area .help-box.show .help-answer {
+    display: block; }
+
+.modal .help-area {
+  margin: 5px;
+  padding: 5px; }
+  .modal .help-area .help-box .help-title {
+    font-size: 16px; }
+
+.challenge-error-modal {
+  width: 70%;
+}
+
+.faq-area {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999999; }
+
+.circle-button-left {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px gray;
+  background-color: white;
+  color: #3C3C3C;
+  padding: 0px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 40px;
+  padding-right: 5px;
+  position: absolute;
+  top: 40%;
+  margin-left: -60px; }
+  @media (max-width: 600px) {
+    .circle-button-left {
+      top: 105%;
+      margin-left: 0px; } }
+
+.circle-button-left-text {
+  font-size: 10px;
+  color: #3C3C3C;
+  text-align: center;
+  line-height: 50px;
+  padding-right: 5px;
+  position: absolute;
+  top: 40%;
+  margin-left: -65px;
+  margin-top: 35px; }
+  @media (max-width: 600px) {
+    .circle-button-left-text {
+      top: 105%;
+      margin-left: -5px; } }
+
+.circle-button-right {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px gray;
+  background-color: white;
+  color: #3C3C3C;
+  padding: 0px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 40px;
+  padding-left: 5px;
+  position: absolute;
+  top: 40%;
+  right: 0px;
+  margin-right: -45px; }
+  @media (max-width: 600px) {
+    .circle-button-right {
+      top: 105%;
+      margin-right: 15px; } }
+
+.circle-button-right-text {
+  font-size: 10px;
+  color: #3C3C3C;
+  text-align: center;
+  line-height: 50px;
+  padding-left: 5px;
+  position: absolute;
+  top: 40%;
+  right: 0px;
+  margin-top: 35px;
+  margin-right: -52px; }
+  @media (max-width: 600px) {
+    .circle-button-right-text {
+      top: 105%;
+      margin-right: 10px; } }
+
+footer {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0174c1+0,51a7f9+100 */
+  background: #0174c1;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #0174c1 0%, #51a7f9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #0174c1 0%, #51a7f9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0174c1 0%, #51a7f9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0174c1', endColorstr='#51a7f9',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  font-size: 10px;
+  padding: 10px 0px 10px 0px; }
+  @media (max-width: 600px) {
+    footer div {
+      margin: 10px auto; } }
+  footer a {
+    color: white !important; }
+
+@media screen and (max-width: 600px) {
+  .row {
+    margin: 0px; }
+  .card.card-separated {
+    margin-top: 10px;
+    margin-bottom: 10px; } }
